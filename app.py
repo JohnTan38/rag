@@ -19,16 +19,17 @@ client = OpenAI(api_key=api_key) if api_key else None
 # Corrected dir_pdfs to be a directory path where PDFs are stored.
 # If you have PDFs in a different directory, please update this path.
 #dir_pdfs = '/content/drive/MyDrive/RAG/'
-dir_pdfs=r'C:/Users/user.name/Documents/.../rag_pdfs/'
+#dir_pdfs=r'C:/Users/user.name/Documents/.../rag_pdfs/'
 
 # Ensure the path is a directory and then list only PDF files.
+"""
 if os.path.isdir(dir_pdfs):
     pdf_files = [os.path.join(dir_pdfs, f) for f in os.listdir(dir_pdfs) if f.endswith('.pdf')]
 else:
     # If it was intended to be a single file, handle it as such
     # For this fix, assuming directory usage, so raising an error if not a directory
     raise ValueError(f"'{dir_pdfs}' is not a directory. Please provide a valid directory path for PDF files.")
-
+"""
 #print(f"Found {len(pdf_files)} PDF files: {pdf_files}")
 
 def upload_single_pdf(file_path: str, vector_store_id: str):
@@ -644,4 +645,5 @@ if st.button("Get answer"):
 
         st.subheader("Answer")
         st.write(answer)
+
 
