@@ -19,7 +19,7 @@ client = OpenAI(api_key=api_key) if api_key else None
 # Corrected dir_pdfs to be a directory path where PDFs are stored.
 # If you have PDFs in a different directory, please update this path.
 #dir_pdfs = '/content/drive/MyDrive/RAG/'
-dir_pdfs=r'C:/Users/john.tan/Documents/res/rag_pdfs/'
+dir_pdfs=r'C:/Users/user.name/Documents/.../rag_pdfs/'
 
 # Ensure the path is a directory and then list only PDF files.
 if os.path.isdir(dir_pdfs):
@@ -644,3 +644,4 @@ if st.button("Get answer"):
 
         st.subheader("Answer")
         st.write(answer)
+
